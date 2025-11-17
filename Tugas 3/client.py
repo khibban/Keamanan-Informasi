@@ -89,7 +89,7 @@ class SecureClient:
                         continue
                     
                     elif msg.get("type") == "new_client":
-                        print(f"\n👤 New client connected: {msg['addr']}")
+                        print(f"\n New client connected: {msg['addr']}")
                         print("> ", end="", flush=True)
                         continue
                         
