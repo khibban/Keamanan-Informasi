@@ -146,15 +146,10 @@ class SecureClient:
         receive_thread.start()
         
         print("   Waiting for key exchange to complete...")
-        print("   (Start another client to begin secure chat)")
-        print("   Type '/quit' to exit\n")
         
         try:
             while True:
-                message = input("> ")
-                if message.lower() == '/quit':
-                    break
-                
+                message = input("> ")              
                 if not message.strip():
                     continue
                 
@@ -171,7 +166,7 @@ class SecureClient:
             print("\n Exiting...")
         finally:
             client_socket.close()
-            print("🔌 Connection closed.")
+            print(" Connection closed.")
 
 if __name__ == "__main__":
     print()
